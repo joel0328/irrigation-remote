@@ -1,6 +1,8 @@
 # Backlog drafts
 
-Drafts of GitHub issues, to be created once the repository exists on GitHub. `python tools/backlog_to_gh.py` prints a `gh issue create` command for each one; nothing is sent automatically.
+> **These now live on GitHub.** All 42 drafts below were created as [issues #2 to #43](https://github.com/joel0328/irrigation-remote/issues) on 2026-11-03. Track and edit them there; this file is kept as the original record and is no longer updated. New issues go straight to GitHub.
+
+`python tools/backlog_to_gh.py` prints a `gh issue create` command for each draft; nothing is sent automatically.
 
 Format: each issue is a `## ` heading (the title), a `labels:` line, then the body up to the next heading. Labels: `research`, `hardware`, `firmware`, `decision`, `vendor`.
 
@@ -40,11 +42,6 @@ Adapters take research time and may need vendor specs. Ask the friend which bran
 labels: hardware, decision
 
 No suitable board yet. Two are needed for the link test. Before buying, read the vendor's own page to confirm the band covers 902 to 928 MHz (ST's site timed out on 2026-11-03). Consider whether a pre-certified module board fits better than a Nucleo (NFR-03). Record the choice and order codes in Q9.
-
-## Decide: commit e-mail before going public (Q10)
-labels: decision
-
-Commits are public once pushed. Choose a personal address or the GitHub no-reply address.
 
 ## Decide: MkDocs Material end of life
 labels: decision

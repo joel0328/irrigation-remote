@@ -15,7 +15,7 @@ Keep this list current. When a question is answered, move it to the decision col
 | Q7 | Contact vendors for remote-port specifications? | Vendors may decline or ask for an agreement. See [vendor requests](research/vendor-requests.md). | open |
 | Q8 | Does the friend want brand adapters, or is the in-line route enough? | Adapters cost research time and may need vendor specs. | open |
 | Q9 | Which dev board variant do we have for the radio test? Verify it covers 902 to 928 MHz. | A 868 MHz board will not do for US testing. | 2026-11-03, Joel: no suitable board yet; one must be bought. Still open: which board. Check the vendor's band coverage before buying (ST's site could not be reached on 2026-11-03). Two boards are needed for a link test. |
-| Q10 | Commit e-mail address before going public: personal or GitHub no-reply | Commits are public forever once pushed. | open (handoff documents: 2026-11-03, Joel: not needed; removed, never committed) |
+| Q10 | Commit e-mail address before going public: personal or GitHub no-reply | Commits are public forever once pushed. | 2026-11-03, Joel: GitHub no-reply address (`103291378+joel0328@users.noreply.github.com`), set in the repository's git config. |
 
 ## Technical unknowns
 
