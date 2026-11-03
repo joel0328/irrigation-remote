@@ -1,9 +1,9 @@
 site_name: Irrigation Remote
 site_description: Research and design for a low-cost handheld radio remote for residential irrigation controllers.
 site_author: Joel Anthony
-# site_url and repo_url are set once the GitHub repository exists.
-# site_url: https://<owner>.github.io/irrigation-remote/
-# repo_url: https://github.com/<owner>/irrigation-remote
+# The repository does not exist on GitHub yet; these are the intended URLs.
+site_url: https://joel0328.github.io/irrigation-remote/
+repo_url: https://github.com/joel0328/irrigation-remote
 copyright: Copyright &copy; 2026 Joel Anthony. Code under the MIT licence.
 
 docs_dir: docs

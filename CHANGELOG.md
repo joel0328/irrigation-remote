@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to this project are written here by hand. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Tag families and version rules are in [docs/versioning.md](https://github.com/OWNER/irrigation-remote/blob/main/docs/versioning.md).
+All notable changes to this project are written here by hand. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Tag families and version rules are in [docs/versioning.md](https://github.com/joel0328/irrigation-remote/blob/main/docs/versioning.md).
 
 Nothing has been tagged or released yet.
 
