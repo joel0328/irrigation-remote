@@ -1,0 +1,18 @@
+set(IRR_TESTS test_aes128 test_frame test_runtimer test_link)
+
+if(IRR_SANITIZE)
+  target_compile_options(irr_core PRIVATE -fsanitize=address,undefined -fno-omit-frame-pointer)
+endif()
+
+foreach(t IN LISTS IRR_TESTS)
+  add_executable(${t} ${t}.c)
+  target_link_libraries(${t} PRIVATE irr_core)
+  if(CMAKE_C_COMPILER_ID MATCHES "GNU|Clang")
+    target_compile_options(${t} PRIVATE -Wall -Wextra)
+  endif()
+  if(IRR_SANITIZE)
+    target_compile_options(${t} PRIVATE -fsanitize=address,undefined -fno-omit-frame-pointer)
+    target_link_options(${t} PRIVATE -fsanitize=address,undefined)
+  endif()
+  add_test(NAME ${t} COMMAND ${t})
+endforeach()
