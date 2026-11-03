@@ -1,0 +1,34 @@
+# Capture metadata. Copy beside each raw capture with the same base name.
+# Fields follow docs/research/measurement-plan.md.
+date: YYYY-MM-DD
+captured_by: ""
+what: ""            # e.g. "start zone 3 for 10 min, then stop all"
+claims_tested: []   # e.g. [HUN-011, HUN-012]
+
+controller:
+  make: ""
+  model: ""
+  firmware: ""
+  date_code: ""
+
+receiver:          # the brand remote receiver attached, if any
+  make: ""
+  model: ""
+  revision: ""
+
+instrument:
+  analyzer: ""      # e.g. Saleae Logic 8
+  sample_rate: ""   # e.g. 25 MS/s
+  ground_reference: ""   # e.g. "controller AC#2, analyzer on battery laptop"
+  channels:
+    - ch: 0
+      probes: ""    # e.g. "REM wire"
+
+supply_vac: null    # measured, not nominal
+
+files:
+  raw: ""           # .sal, .sr or .csv
+  photo: ""
+
+result: ""          # what the capture shows, in a sentence or two
+notes: ""

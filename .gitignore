@@ -1,0 +1,31 @@
+# Build outputs
+/build/
+/site/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Handoff material from the earlier chat (kept locally, not published)
+/seed/
+/HANDOFF_PROMPT.md
+
+# Editors and OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# KiCad
+*.kicad_prl
+*-backups/
+fp-info-cache
+_autosave-*
+*.lck
+
+# Secrets: never commit keys
+*.key
+*.pem
+secrets.*
