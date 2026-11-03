@@ -9,13 +9,14 @@
 # UNTESTED: nothing here has run on a board. The board layer is stubs.
 cmake_minimum_required(VERSION 3.20)
 
+project(irrigation_remote_stm32wl C ASM)
+
+# The toolchain file is only read by project(), so check after it.
 if(NOT CMAKE_CROSSCOMPILING)
   message(FATAL_ERROR
     "The STM32WL port needs the arm-none-eabi toolchain file. "
     "Pass -DCMAKE_TOOLCHAIN_FILE=<repo>/firmware/port/stm32wl/arm-none-eabi.cmake")
 endif()
-
-project(irrigation_remote_stm32wl C ASM)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
