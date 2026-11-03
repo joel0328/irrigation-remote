@@ -11,7 +11,6 @@ Rain Bird controllers have a remote port that comes in two physical versions, 5-
 | RB-003 | LIMR parts: LIMR-KIT (900 MHz transmitter, receiver, quick-connects, case), LIMR-TX, LIMR-RX, LIMR-QC603 and QC630 (6-pin quick-connect cables, 3 ft and 30 ft). | documented | [ESP-LXME installation guide](https://www.rainbird.com/sites/default/files/media/documents/2018-02/man_ESP-LXME_InstallationTroubleshootingGuide.pdf) | 2026-11-02 |
 | RB-004 | Rain Bird recommends mounting the LIMR quick-connect beside or above the controller, not below, because below can interfere with the controller's transformer and reduce operating distance. Antenna vertical, not inside a metal cabinet. | documented | LIMR quick-start guide | 2026-11-02 |
 | RB-005 | 6-pin controllers send no status back to the LIMR, so use the OFF command to stop a zone. | documented | LIMR quick-start guide | 2026-11-02 |
-| RB-006 | TRC's receiver for the 6-pin port claims it displays valve status on most controllers. This conflicts with RB-005 and is unresolved. | reported | [TRC receiver sheet](https://remotecontroltech.com/wp-content/uploads/2018/09/Commander-Rain-Bird-RX-Cut-V1.pdf) | 2026-11-02 |
 
 ## The 5-pin port (one person's measurements)
 
@@ -43,10 +42,6 @@ All rows come from one forum thread by one poster on one controller, [Reverse en
 | RB-031 | Rain Bird's sales page says the full technical specifications of that adapter are available on request from a Rain Bird sales representative. This is a route to real signal information without measuring. | documented | [sales sheet](https://www.rainbird.com/sites/default/files/media/documents/2025-12/flatened_2025-11-10_rain_bird_promax_remote_adapter_sales_sheet.pdf) | 2026-11-02 |
 | RB-032 | Rain Bird's own wireless-valve patent application describes a universal configuration that connects to station output terminals with an AC input, and says that in some embodiments the interface needs no special protocol. This supports the in-line route working with any controller. | documented | [US 2020/0367452](https://uspto.report/patent/app/20200367452) | 2026-11-02 |
 | RB-033 | Rain Bird patents US 7,400,944 and US 6,782,310 are about battery-powered wireless valve controllers and describe no remote port. | documented | uspto.report | 2026-11-02 |
-
-## TRC's Rain Bird routes
-
-TRC sells a receiver for the 6-pin port with a controller interface cable (part 01387), a logic converter DCI-RB5 (6-pin to 5-pin), and a permanent cable that goes to the controller mainboard's zone connectors through 15-pin D-sub connectors, which skips the remote port. See [TRC research](trc-commander.md).
 
 ## Next steps
 

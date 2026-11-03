@@ -18,7 +18,7 @@ Nothing in this repository is `confirmed` yet. Every row below was read from doc
 
 Each row has an ID such as `HUN-007`. Never reuse or renumber an ID. If a claim is wrong, change its status or add a superseding row and say why. Other files cite claims by ID.
 
-Prefixes: `TRC` TRC Commander and DCI, `HUN` Hunter, `RB` Rain Bird, `IRR` Irritrol and Toro, `GEN` cross-brand.
+Prefixes: `HUN` Hunter, `RB` Rain Bird, `IRR` Irritrol and Toro, `GEN` cross-brand.
 
 ## Rules for adding research
 
@@ -31,7 +31,6 @@ Prefixes: `TRC` TRC Commander and DCI, `HUN` Hunter, `RB` Rain Bird, `IRR` Irrit
 ## Files
 
 - [Claim status](status.md): counts by status across all files, generated at build time
-- [TRC Commander and DCI](trc-commander.md)
 - [Hunter SmartPort / REM](hunter.md)
 - [Rain Bird remote ports](rain-bird.md)
 - [Irritrol and Toro remote ports](irritrol-toro.md)

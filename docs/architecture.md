@@ -33,8 +33,6 @@ flowchart LR
 | In-line (station line) | Receiver relays sit between the controller's zone terminals and the valves | None for 24 VAC controllers | proposed v1 |
 | Remote-port adapter | Receiver speaks a controller's remote-port protocol | One adapter per brand and port generation | optional; signals mostly undocumented |
 
-TRC sells both routes too (a universal receiver on the station line, and DCI logic converters). See [TRC research](research/trc-commander.md).
-
 ## Behaviour decisions proposed
 
 - The receiver holds the run timer. A lost link or lost power ends the run.

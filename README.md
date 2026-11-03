@@ -8,13 +8,13 @@
 
 ## The problem
 
-When an irrigation technician services a system, they spend much of the visit walking between the controller and the zones: start zone 3, walk out, check the heads, walk back, start zone 4. A handheld remote removes the walking. The established product for this job is the TRC Commander, a handheld FM transmitter with receivers that attach to the controller. It works well, but it is expensive: one dealer lists a single Commander receiver at over $1,100 ([TRC-014](docs/research/trc-commander.md)).
+When an irrigation technician services a system, they spend much of the visit walking between the controller and the zones: start zone 3, walk out, check the heads, walk back, start zone 4. A handheld remote removes the walking, but the commercial remote systems sold to contractors are expensive.
 
 The brands' own remotes, such as Hunter ROAM and Rain Bird LIMR, are cheaper, but each plugs into its own brand's controller port. A technician who meets Hunter, Rain Bird, Irritrol and others in one week would need a remote for each.
 
 ## What this project is building
 
-A handheld transmitter and a receiver that does the TRC Commander's job for a fraction of the cost, working with whatever 24 VAC controller is on site.
+A handheld transmitter and a receiver that do that job for a fraction of the cost, working with whatever 24 VAC controller is on site.
 
 The first unit is a prototype for an irrigation company's own maintenance work. The project is also a deliberate learning exercise in sub-GHz radio, embedded security and taking a board from bench to field, so the design, the research and the reasoning are all written down here in the open.
 
@@ -44,14 +44,14 @@ flowchart LR
 
 | Principle | How |
 |---|---|
-| **Works with any brand** | The receiver's relays sit in series with the controller's zone wires (the "in-line" route), so it needs no brand-specific protocol. TRC's universal receiver uses the same idea. |
+| **Works with any brand** | The receiver's relays sit in series with the controller's zone wires (the "in-line" route), so it needs no brand-specific protocol. |
 | **Fails safe** | The receiver holds the run timer. No message is needed to end a run, relays are normally open, and power-up is all-off. |
 | **Confirms, doesn't assume** | Every command is acknowledged. Tier 2 confirmation senses 24 VAC on the output; sensing solenoid current is a stretch goal. |
 | **Authenticated** | AES-128-CMAC on every frame plus rolling counters, so a neighbour's remote or a recording of yours cannot start a zone. |
 | **One zone at a time** | Switching zones is break-before-make. Hunter's ROAM behaves the same way: starting one station stops the running one ([HUN-003](docs/research/hunter.md)). |
 | **Testable on a PC** | The protocol and state machines live in a portable C library with no hardware calls and full host unit tests. |
 
-**v1 scope:** residential systems, 8 zones plus a master valve or pump output, one handheld paired with one receiver, run times up to 2 hours (20 minutes by default, matching TRC).
+**v1 scope:** residential systems, 8 zones plus a master valve or pump output, one handheld paired with one receiver, run times up to 2 hours (20 minutes by default).
 
 **Not in v1:** programming controller schedules, several zones at once, a phone or cloud interface, or selling units.
 
@@ -61,7 +61,6 @@ The in-line route works with any 24 VAC controller. Optional adapters that speak
 
 | Brand | Port | What is known |
 |---|---|---|
-| TRC Commander | 37-pin station cable; DCI logic converters | Station cable pinout documented. DCI signals not public. |
 | Hunter | SmartPort (REM wire) | Single-wire, pulse-width protocol reverse-engineered by community projects. Not yet checked on real hardware. |
 | Rain Bird | 5-pin and 6-pin remote ports | 5-pin partly measured by one forum poster (SPI-like). 6-pin unknown. Rain Bird says full specs for a third-party port adapter are available from its sales reps (RB-031). |
 | Irritrol / Toro | RJ-11, RJ-45, 5-pin header | Connectors documented, signals not. FCC schematics withheld. |
@@ -82,7 +81,7 @@ Claims are `confirmed` (measured by this project), `documented` (official source
 
 **Done so far:**
 
-- Research on four brands: 73 claims, each with a source and access date.
+- Research on three controller brands: 56 claims, each with a source and access date.
 - Requirements, architecture, safety and regulatory notes, open questions.
 - [Radio protocol v0.1](docs/protocol/v0.1.md) (draft).
 - Portable firmware library in `firmware/core`: AES-128 and CMAC (checked against FIPS-197 and RFC 4493 vectors), framing, replay protection, the receiver run timer, and receiver and handheld message handling. Host-tested only.
@@ -134,10 +133,10 @@ Contributions and corrections are welcome, especially captures from real control
 
 ## Safety
 
-This project works on the **24 VAC side** of irrigation controllers only. Mains wiring is out of scope. The receiver is to be fused and protected against over-voltage (TRC documents damage above 28 VAC). Until it has been built and tested, treat everything here as experimental. Radio use is under FCC Part 15 in the 902–928 MHz band; see [safety and regulatory notes](docs/safety-regulatory.md).
+This project works on the **24 VAC side** of irrigation controllers only. Mains wiring is out of scope. The receiver is to be fused and protected against over-voltage (design target: survive at least 28 VAC). Until it has been built and tested, treat everything here as experimental. Radio use is under FCC Part 15 in the 902–928 MHz band; see [safety and regulatory notes](docs/safety-regulatory.md).
 
 ## Licence
 
 [MIT](LICENSE) © 2026 Joel Anthony.
 
-Brand and product names belong to their owners and are used only to describe compatibility. This project is not affiliated with or endorsed by TRC Irrigation Remotes, Hunter Industries, Rain Bird, Irritrol, Toro or any other vendor.
+Brand and product names belong to their owners and are used only to describe compatibility. This project is not affiliated with or endorsed by Hunter Industries, Rain Bird, Irritrol, Toro or any other vendor.

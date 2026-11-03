@@ -9,7 +9,7 @@ Public sources are nearly exhausted for the remote ports. The remaining way to g
 | Logic analyzer, at least 8 channels, at least 25 MS/s (Saleae Logic 8 or DSLogic Plus class) | Hunter timing is in the 200 µs to 2 ms range; the Rain Bird 5-pin clock period is unknown and in the microseconds. |
 | Oscilloscope or scope-capable meter | Idle levels, edge shape, whether lines are open-drain. |
 | Multimeter | Check every pin for voltage before connecting the analyzer. |
-| One real receiver per brand | Hunter ROAM-R or ROAM XL-R; Rain Bird LIMR-RX (and an LNK or LNK2 module if available); Irritrol CL-MR; TRC DCI parts if budget allows. |
+| One real receiver per brand | Hunter ROAM-R or ROAM XL-R; Rain Bird LIMR-RX (and an LNK or LNK2 module if available); Irritrol CL-MR. |
 | One real controller per brand and port generation | The ports differ by model. Record the exact model and firmware. |
 | 24 VAC supply with a fuse, breakout cables for each connector | The prototype never touches mains wiring. |
 
@@ -37,7 +37,6 @@ Public sources are nearly exhausted for the remote ports. The remaining way to g
 | 3 | Rain Bird 6-pin | All six contacts with a LIMR receiver attached, idle and during a command | RB-020 and RB-021 |
 | 4 | Irritrol | All six conductors of the RJ-11 jack on a Rain Dial-R or Total Control-R with a CL-MR attached | IRR-007 |
 | 5 | Irritrol older | 5-pin header on an MC-E or KwikDial via the CMR-ADP | IRR-002, IRR-004 |
-| 6 | TRC DCI | The 6-pin board header with a DCI-1 attached (if a unit can be bought or borrowed) | TRC-012 |
 
 ## Decision after captures
 

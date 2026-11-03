@@ -5,7 +5,7 @@ This is a working note, not legal or compliance advice. Have a qualified person 
 ## Electrical safety
 
 - The receiver sits on the 24 VAC side only. The prototype never touches mains wiring.
-- Fuse the 24 VAC input. TRC documents damage above 28 VAC and a 3 A resetting fuse in its universal receiver; use these as design reference points, not as proof.
+- Fuse the 24 VAC input and protect it against over-voltage (design target: survive at least 28 VAC). Size the fuse from the solenoid load and test it.
 - Valve solenoids are inductive. Add suppression across relay contacts and coils as needed, and test with real solenoids.
 - Fail safe: loss of radio link or power must end the run (REQ-08). Test this explicitly.
 - Wet outdoor environment: enclosure rating, cable glands, and conformal coating to be decided.
