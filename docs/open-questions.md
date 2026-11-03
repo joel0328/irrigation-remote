@@ -10,11 +10,12 @@ Keep this list current. When a question is answered, move it to the decision col
 | Q2 | Is a master valve or pump output needed in v1? | Adds a relay and a wiring step. TRC supports it. | proposed yes (REQ-05) |
 | Q3 | Zone count: 8 for v1, or more? | Sets relay and sense channel count. | proposed 8 |
 | Q4 | Range target and cost target | Radio choice, antenna, enclosure. | open |
-| Q5 | Repository owner, name and visibility | Friend's company may own the IP. Default to private until agreed. | open |
-| Q6 | Licence | Depends on who owns the work. Do not pick one until Q5 is settled. | open |
+| Q5 | Repository owner, name and visibility | Friend's company may own the IP. Default to private until agreed. | 2026-11-03, Joel: the friend's company owns nothing here. Public repository `irrigation-remote` on Joel's GitHub account. [ADR 0002](adr/0002-public-repository-mit-licence.md) |
+| Q6 | Licence | Depends on who owns the work. Do not pick one until Q5 is settled. | 2026-11-03, Joel: "probably MIT". MIT licence file added; Joel confirms before the first push. [ADR 0002](adr/0002-public-repository-mit-licence.md) |
 | Q7 | Contact TRC or other vendors? | TRC is a competitor. See [vendor requests](research/vendor-requests.md). | open |
 | Q8 | Does the friend want brand adapters, or is the in-line route enough? | Adapters cost research time and may need vendor specs. | open |
-| Q9 | Which dev board variant do we have for the radio test? Verify it covers 902 to 928 MHz. | A 868 MHz board will not do for US testing. | open |
+| Q9 | Which dev board variant do we have for the radio test? Verify it covers 902 to 928 MHz. | A 868 MHz board will not do for US testing. | 2026-11-03, Joel: no suitable board yet; one must be bought. Still open: which board. Check the vendor's band coverage before buying (ST's site could not be reached on 2026-11-03). Two boards are needed for a link test. |
+| Q10 | Repository housekeeping before going public: commit e-mail address (personal or GitHub no-reply) and whether to publish the handoff prompt | Commits are public forever once pushed. | open |
 
 ## Technical unknowns
 

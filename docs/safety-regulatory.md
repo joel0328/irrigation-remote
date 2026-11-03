@@ -20,7 +20,7 @@ This is a working note, not legal or compliance advice. Have a qualified person 
 
 ## Intellectual property
 
-- The friend's company may own the design. Confirm before choosing a licence or making the repository public (Q5, Q6).
+- Ownership is settled: Joel says the friend's company owns nothing here. The repository is public under MIT ([ADR 0002](adr/0002-public-repository-mit-licence.md)). Because it is public, nothing about customers, sites, keys or the friend's business goes in it.
 - Do not copy code from GPL projects (the OpenSprinkler Hunter firmware is one) into this repository. Read them for understanding and write original code. Log what was read.
 - Do not paste vendor manuals into the repository. Summarize and link.
 - Be careful about reverse engineering a vendor's port if its licence or terms prohibit it. Note the question; ask the friend.
