@@ -1,0 +1,58 @@
+name: firmware-ci
+
+on:
+  push:
+    branches: [main]
+    paths: ["firmware/**", ".github/workflows/firmware-ci.yml"]
+  pull_request:
+    paths: ["firmware/**", ".github/workflows/firmware-ci.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  host-tests:
+    name: Host unit tests (${{ matrix.cc }})
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        cc: [gcc, clang]
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install Ninja
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends ninja-build
+      - name: Configure
+        run: >
+          cmake -S firmware -B build/host -G Ninja
+          -DCMAKE_C_COMPILER=${{ matrix.cc }}
+          -DCMAKE_BUILD_TYPE=Debug
+          -DIRR_SANITIZE=ON
+      - name: Build
+        run: cmake --build build/host
+      - name: Test
+        run: ctest --test-dir build/host --output-on-failure
+
+  stm32wl-build:
+    name: STM32WL port build (stubs, untested on hardware)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install arm-none-eabi-gcc
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends gcc-arm-none-eabi libnewlib-arm-none-eabi ninja-build
+      - run: arm-none-eabi-gcc --version
+      - name: Configure
+        run: >
+          cmake -S firmware/port/stm32wl -B build/stm32wl -G Ninja
+          -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/firmware/port/stm32wl/arm-none-eabi.cmake
+          -DCMAKE_BUILD_TYPE=MinSizeRel
+      - name: Build
+        run: cmake --build build/stm32wl
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stm32wl-receiver-${{ github.sha }}
+          path: |
+            build/stm32wl/receiver.elf
+            build/stm32wl/receiver.hex
+            build/stm32wl/receiver.map
