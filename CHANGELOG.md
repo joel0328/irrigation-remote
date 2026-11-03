@@ -9,7 +9,7 @@ Nothing has been tagged or released yet.
 ### Added
 
 - Repository layout, MkDocs Material documentation site with Mermaid diagrams, and GitHub Actions workflows for the docs and firmware.
-- Research from the earlier sessions (2026-10-31 to 2026-11-02): TRC Commander, Hunter, Rain Bird, Irritrol and Toro, with claim IDs and statuses; requirements, architecture, open questions, safety notes, build plan, measurement plan and vendor request drafts.
+- Research from the earlier sessions (2026-10-31 to 2026-11-02): Hunter, Rain Bird, Irritrol and Toro, with claim IDs and statuses; requirements, architecture, open questions, safety notes, build plan, measurement plan and vendor request drafts.
 - Generated claim-status page; the docs build fails on malformed claim tables.
 - Versioning scheme for research, protocol, firmware and hardware (`docs/versioning.md`).
 - Decision records: ADR 0001 (record decisions), ADR 0002 (public repository, MIT).

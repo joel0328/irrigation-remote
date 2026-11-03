@@ -1,6 +1,6 @@
 # Irrigation Remote
 
-A research and design project for a low-cost handheld radio remote that starts and stops zones on residential irrigation controllers. It does the same job as the TRC Commander. This site holds the research, the proposed design, the radio protocol, and the firmware and hardware as they are built.
+A research and design project for a low-cost handheld radio remote that starts and stops zones on residential irrigation controllers. This site holds the research, the proposed design, the radio protocol, and the firmware and hardware as they are built.
 
 !!! danger "Nothing here has been built or tested"
     Every design, protocol and firmware feature on this site is a proposal. No radio link, relay, fail-safe or confirmation feature has run on hardware. The portable firmware library passes unit tests on a PC, and that is all. Research claims are labelled by how well they are supported: only a capture or test made by this project counts as `confirmed`, and there are none yet.
@@ -22,7 +22,6 @@ A handheld transmitter sends an authenticated command over the 902 to 928 MHz ba
 How each brand's own remote talks to its controllers. This matters for optional brand adapters; the in-line route does not depend on it.
 
 - [Claim status across all brands](research/status.md)
-- [TRC Commander](research/trc-commander.md)
 - [Hunter](research/hunter.md)
 - [Rain Bird](research/rain-bird.md)
 - [Irritrol and Toro](research/irritrol-toro.md)

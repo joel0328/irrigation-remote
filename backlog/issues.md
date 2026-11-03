@@ -9,7 +9,7 @@ Vendor issues are reminders for Joel or the friend. Nobody sends anything on the
 ## Decide: receiver power source (Q1)
 labels: decision, hardware
 
-Own 24 VAC transformer, or draw from the controller? Affects the enclosure, the wiring, and whether the receiver works when the controller is off. TRC takes power from the controller and warns against connecting both (TRC-008). Record the decision as an ADR. See docs/open-questions.md Q1.
+Own 24 VAC transformer, or draw from the controller? Affects the enclosure, the wiring, and whether the receiver works when the controller is off. Record the decision as an ADR. See docs/open-questions.md Q1.
 
 ## Decide: master valve or pump output in v1 (Q2)
 labels: decision, hardware
@@ -24,12 +24,12 @@ Proposed 8. Sets the relay and sense channel count.
 ## Decide: range target and cost target (Q4)
 labels: decision
 
-Needed before choosing antennas and the enclosure, and to judge Phase 1 results. Also record the real price of a TRC Commander set (NFR-05).
+Needed before choosing antennas and the enclosure, and to judge Phase 1 results. Also record what comparable commercial remotes cost (NFR-05).
 
-## Decide: whether to contact vendors, TRC in particular (Q7)
+## Decide: whether to contact vendors (Q7)
 labels: decision, vendor
 
-TRC is a competitor. Decide with the friend before any request goes out. See docs/research/vendor-requests.md.
+Decide with the friend before any request goes out. See docs/research/vendor-requests.md.
 
 ## Decide: brand adapters or the in-line route only (Q8)
 labels: decision
@@ -61,11 +61,6 @@ labels: research
 
 Route: FCC internal photos pages 2 and 3, vendor request, capture 4 and 5. Claims IRR-007, IRR-021, IRR-022.
 
-## TRC DCI interface signals (T3)
-labels: research
-
-Nothing public (TRC-012). Capture 6, or ask TRC if Q7 allows.
-
 ## Does a Hunter controller ever reply on REM? (T4)
 labels: research
 
@@ -74,22 +69,22 @@ Neither community implementation reads a reply (HUN-018). Answer with capture 1.
 ## Research Rain Master remote port (T5)
 labels: research
 
-New file docs/research/rain-master.md with an `RM` prefix (add it to tools/claims.py). TRC sells DCI-RM (TRC-011); Imperial's ProMax adapter shows Rain Master remotes are used across brands (RB-030).
+New file docs/research/rain-master.md with an `RM` prefix (add it to tools/claims.py). Imperial's ProMax adapter shows Rain Master remotes are used across brands (RB-030).
 
 ## Research Weathermatic remote port (T5)
 labels: research
 
-New research file. TRC sells a Weathermatic interface cable (TRC-011).
+New research file.
 
 ## Research Superior and HIT Logic remote ports (T5)
 labels: research
 
-New research file. TRC lists DCI-1 for Superior Sterling (TRC-009) and receiver cards for HIT Logic 2 and 3 (TRC-013).
+New research file.
 
 ## Research Griswold remote port (T5)
 labels: research
 
-New research file. TRC lists a Griswold IDC receiver card (TRC-013).
+New research file.
 
 ## Research Orbit and other smart controllers (T5)
 labels: research
@@ -126,11 +121,6 @@ labels: research
 
 Use a desktop PDF reader. Look for pin labels on the receiver cable (IRR-021) and radio details (IRR-022).
 
-## TRC: is the DCI-1 six-pin header the same bus as the Irritrol five-pin header?
-labels: research
-
-No source says so. See docs/research/trc-commander.md, open questions.
-
 ## Capture 1: Hunter REM
 labels: research, hardware
 
@@ -156,11 +146,6 @@ labels: research, hardware
 
 MC-E or KwikDial through a CMR-ADP.
 
-## Capture 6: TRC DCI-1 header
-labels: research, hardware
-
-Only if a DCI-1 can be bought or borrowed (and Q7 is settled).
-
 ## Vendor: Rain Bird remote-port specification
 labels: vendor
 
@@ -180,11 +165,6 @@ Irritrol technical assistance. See the tracker in vendor-requests.md.
 labels: vendor
 
 Hunter technical support.
-
-## Vendor: TRC DCI interface
-labels: vendor, decision
-
-Only after Q7 is decided.
 
 ## Firmware: add STM32CubeWL as a pinned dependency
 labels: firmware

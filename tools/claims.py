@@ -19,7 +19,6 @@ from pathlib import Path
 
 STATUSES = ("confirmed", "documented", "reported", "inferred", "unknown")
 PREFIXES = {
-    "TRC": "TRC Commander and DCI",
     "HUN": "Hunter",
     "RB": "Rain Bird",
     "IRR": "Irritrol and Toro",
