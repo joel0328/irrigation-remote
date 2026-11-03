@@ -1,0 +1,33 @@
+/* Claim status badges (added by tools/mkdocs_hooks.py). */
+.claim-status {
+  display: inline-block;
+  padding: 0.05em 0.5em;
+  border-radius: 0.8em;
+  font-size: 0.85em;
+  font-weight: 600;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+.claim-confirmed  { background: #d6f5dc; color: #135c25; border-color: #8fd19e; }
+.claim-documented { background: #dbe9ff; color: #123e7a; border-color: #94b8ee; }
+.claim-reported   { background: #fff1cc; color: #6b4a00; border-color: #e8c766; }
+.claim-inferred   { background: #ece3ff; color: #44237a; border-color: #b9a1e6; }
+.claim-unknown    { background: #eceff1; color: #37474f; border-color: #b0bec5; }
+
+[data-md-color-scheme="slate"] .claim-confirmed  { background: #12351c; color: #a6e7b4; border-color: #2e6b3d; }
+[data-md-color-scheme="slate"] .claim-documented { background: #142a4a; color: #a9c8f5; border-color: #2f4f80; }
+[data-md-color-scheme="slate"] .claim-reported   { background: #3a2e0a; color: #f0d68a; border-color: #6e5a1c; }
+[data-md-color-scheme="slate"] .claim-inferred   { background: #2a1d45; color: #cdb9f2; border-color: #4f3a7a; }
+[data-md-color-scheme="slate"] .claim-unknown    { background: #263238; color: #cfd8dc; border-color: #455a64; }
+
+/* Untested-feature marker used in firmware and protocol pages. */
+.untested {
+  display: inline-block;
+  padding: 0.05em 0.5em;
+  border-radius: 0.3em;
+  font-size: 0.8em;
+  font-weight: 700;
+  background: #ffe0e0;
+  color: #7a1212;
+}
+[data-md-color-scheme="slate"] .untested { background: #4a1616; color: #f5b3b3; }

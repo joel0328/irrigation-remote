@@ -20,4 +20,10 @@ Five phases with a gate between each. A phase is not done until its gate is met 
 
 ## Versioning
 
-See the root README and `docs/versioning.md` in the repository for the scheme the handoff prompt asks you to set up. Short form: research snapshots, protocol versions, firmware releases and hardware revisions each have their own tag family.
+See [versioning](versioning.md). Short form: research snapshots, protocol versions, firmware releases and hardware revisions each have their own tag family.
+
+## Where things stand (2026-11-03)
+
+- Phase 0 is in progress: Q5 and Q6 are answered, the rest are open.
+- Phase 1 is blocked on buying two 902 to 928 MHz STM32WL boards (Q9).
+- Ahead of Phase 1, the portable firmware library (framing, authentication, counters, run timer) exists and passes host tests. See [firmware](firmware.md).

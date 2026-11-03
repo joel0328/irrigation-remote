@@ -1,0 +1,105 @@
+site_name: Irrigation Remote
+site_description: Research and design for a low-cost handheld radio remote for residential irrigation controllers.
+site_author: Joel Anthony
+# site_url and repo_url are set once the GitHub repository exists.
+# site_url: https://<owner>.github.io/irrigation-remote/
+# repo_url: https://github.com/<owner>/irrigation-remote
+copyright: Copyright &copy; 2026 Joel Anthony. Code under the MIT licence.
+
+docs_dir: docs
+strict: true
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: light green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: light green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    logo: material/sprinkler-variant
+
+extra_css:
+  - stylesheets/extra.css
+
+hooks:
+  - tools/mkdocs_hooks.py
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path: ["."]
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+    absolute_links: warn
+  links:
+    not_found: warn
+    anchors: warn
+    absolute_links: warn
+    unrecognized_links: warn
+
+nav:
+  - Home: index.md
+  - Requirements: requirements.md
+  - Architecture: architecture.md
+  - Research:
+      - research/README.md
+      - Claim status: research/status.md
+      - TRC Commander: research/trc-commander.md
+      - Hunter: research/hunter.md
+      - Rain Bird: research/rain-bird.md
+      - Irritrol and Toro: research/irritrol-toro.md
+      - Research log: research/log.md
+  - Measurement plan: research/measurement-plan.md
+  - Vendor requests: research/vendor-requests.md
+  - Open questions: open-questions.md
+  - Safety and regulatory: safety-regulatory.md
+  - Build plan: build-plan.md
+  - Firmware: firmware.md
+  - Protocol:
+      - protocol/index.md
+      - v0.1 (draft): protocol/v0.1.md
+  - Versioning: versioning.md
+  - Changelog: changelog.md
+  - Decisions:
+      - adr/index.md
+      - "ADR 0001: Record decisions": adr/0001-record-architecture-decisions.md
+      - "ADR 0002: Public repo, MIT": adr/0002-public-repository-mit-licence.md
+      - Template: adr/template.md

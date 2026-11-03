@@ -50,4 +50,4 @@ TRC sells both routes too (a universal receiver on the station line, and DCI log
 
 ## Decisions log
 
-Record each accepted architecture decision as an ADR in `docs/adr/` using the template there.
+Record each accepted architecture decision as an ADR. See [decision records](adr/index.md). The radio message format is in [protocol](protocol/index.md).

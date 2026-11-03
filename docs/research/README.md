@@ -30,6 +30,7 @@ Prefixes: `TRC` TRC Commander and DCI, `HUN` Hunter, `RB` Rain Bird, `IRR` Irrit
 
 ## Files
 
+- [Claim status](status.md): counts by status across all files, generated at build time
 - [TRC Commander and DCI](trc-commander.md)
 - [Hunter SmartPort / REM](hunter.md)
 - [Rain Bird remote ports](rain-bird.md)
