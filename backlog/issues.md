@@ -41,10 +41,10 @@ labels: hardware, decision
 
 No suitable board yet. Two are needed for the link test. Before buying, read the vendor's own page to confirm the band covers 902 to 928 MHz (ST's site timed out on 2026-11-03). Consider whether a pre-certified module board fits better than a Nucleo (NFR-03). Record the choice and order codes in Q9.
 
-## Decide: commit e-mail and handoff prompt before going public (Q10)
+## Decide: commit e-mail before going public (Q10)
 labels: decision
 
-Commits are public once pushed. Choose a personal address or the GitHub no-reply address, and whether HANDOFF_PROMPT.md should be published (it is gitignored for now).
+Commits are public once pushed. Choose a personal address or the GitHub no-reply address.
 
 ## Decide: MkDocs Material end of life
 labels: decision

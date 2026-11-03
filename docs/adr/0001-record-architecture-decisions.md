@@ -3,7 +3,7 @@
 - Status: accepted
 - Date: 2026-11-03
 - Deciders: Joel Anthony
-- Related: handoff prompt, [versioning](../versioning.md)
+- Related: [versioning](../versioning.md)
 
 ## Context
 

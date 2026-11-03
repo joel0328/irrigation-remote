@@ -7,9 +7,9 @@
 
 ## Context
 
-The seed documents assumed the friend's company might own the work and defaulted to a private repository with no licence until ownership was settled (Q5, Q6).
+The earlier design notes assumed the friend's company might own the work and defaulted to a private repository with no licence until ownership was settled (Q5, Q6).
 
-On 2026-11-03 Joel said that the friend's company does not own anything in this project, that the repository should be public, and that the licence will probably be MIT.
+On 2026-11-03 Joel said that the friend's company does not own anything in this project and that the repository should be public, and confirmed the MIT licence.
 
 ## Options considered
 
@@ -19,7 +19,7 @@ On 2026-11-03 Joel said that the friend's company does not own anything in this 
 
 ## Decision
 
-Public GitHub repository `irrigation-remote` under Joel's account, licensed under MIT, copyright Joel Anthony. Joel confirms the MIT choice before the first push.
+Public GitHub repository `irrigation-remote` under Joel's account, licensed under MIT, copyright Joel Anthony.
 
 ## Consequences
 

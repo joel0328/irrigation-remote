@@ -7,10 +7,6 @@
 __pycache__/
 *.pyc
 
-# Handoff material from the earlier chat (kept locally, not published)
-/seed/
-/HANDOFF_PROMPT.md
-
 # Editors and OS
 .vscode/
 .idea/
